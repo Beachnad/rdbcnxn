@@ -1,0 +1,17 @@
+Package: rprocare
+Title: Functions for interacting with procare databases
+Version: 0.0.6
+Authors@R: person("Danny", "Beachnau", email = "dbeachnau@procare.com", role = c("aut", "cre"))
+Description: Functions which interact with procare's databases.
+Depends: R (>= 3.4.3)
+License: None
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1.9000
+Imports:
+    DBI,
+    odbc,
+    RMySQL,
+    RPostgreSQL
+Suggests: 
+    testthat
