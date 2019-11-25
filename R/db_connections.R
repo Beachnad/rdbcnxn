@@ -46,9 +46,9 @@ get_smpc_conn <- get_sql_server_conn('SMPC')
 get_data_mart_conn <- function(){
   conn <- RPostgreSQL::dbConnect(DBI::dbDriver("PostgreSQL"),
                                  dbname =   'postgres',
-                                 user =     Sys.getenv("DATA_MART_USER"),
-                                 password = Sys.getenv("DATA_MART_PASS"),
-                                 host =     Sys.getenv("DATA_MART_HOST"),
-                                 port =     5432)
+                                 user =     get_user('DATA_MART'),
+                                 password = get_pass('DATA_MART'),
+                                 host =     get_host('DATA_MART'),
+                                 port =     get_port('DATA_MART'))
   return(conn)
 }

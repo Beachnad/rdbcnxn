@@ -1,5 +1,15 @@
 version: 2 # use version 2.0 of CircleCI
 jobs:
   build:
+    #  - image: docker/tidyverse:3.6.1
+    working_directory: ~/main
     docker:
-      - image: docker/tidyverse:3.6.1
+      - image: appsilon/ci-base:2.0
+    steps:
+      - checkout
+      - run:
+          command: |
+           R -e 'devtools::install_deps(dependencies = TRUE)'
+      - run:
+          command: |
+            R -e 'devtools::check()'
