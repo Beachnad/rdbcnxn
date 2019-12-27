@@ -9,14 +9,15 @@ get_port <- get_var('PORT')
 
 #' Returns a connection object for lime survey
 #' @export
-get_lime_survey_conn <- function(){
+get_lime_survey_conn <- function(...){
   db <- "LIME_SURVEY"
   DBI::dbConnect(
     RMySQL::MySQL(),
     user = get_user(db),
     password = get_pass(db),
     dbname = 'limesurvey_reporting',
-    host= get_host(db)
+    host= get_host(db),
+    ...
   )
 }
 
