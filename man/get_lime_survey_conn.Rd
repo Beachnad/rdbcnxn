@@ -4,7 +4,7 @@
 \alias{get_lime_survey_conn}
 \title{Returns a connection object for lime survey}
 \usage{
-get_lime_survey_conn()
+get_lime_survey_conn(...)
 }
 \description{
 Returns a connection object for lime survey
