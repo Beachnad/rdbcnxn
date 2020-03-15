@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install system dependencies
-          command: apt-get update && apt-get install -y unixodbc unixodbc-dev curl
+          command: apt-get update && apt-get install -y unixodbc unixodbc-dev curl xml2
       - run:
           name: Install devtools
           command: R -e "install.packages('Rcpp', dependencies = TRUE, repos='http://cran.us.r-project.org'); install.packages('devtools', repos='http://cran.us.r-project.org')"
