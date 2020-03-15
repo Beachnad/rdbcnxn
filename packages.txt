@@ -1,0 +1,8 @@
+libxml2-dev
+libgit2-dev
+libssl-dev
+unixodbc
+unixodbc-dev
+libmariadbclient-dev
+libpq-dev
+texlive-latex-base

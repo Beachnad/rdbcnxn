@@ -25,6 +25,8 @@ conn_function <- function(driver){
   }
 }
 
+#' Get a SQL Server Connection
+#' 
 #' @export
 get_sql_server_conn <- function(database, ...){
   default_args = list(
@@ -52,6 +54,8 @@ get_sql_server_conn <- function(database, ...){
   do.call(DBI::dbConnect, args)
 }
 
+#' Get a MYSQL Connection
+#' 
 #' @export
 get_mysql_conn <- function(database, ...){
   default_args = list(
@@ -71,7 +75,8 @@ get_mysql_conn <- function(database, ...){
   do.call(DBI::dbConnect, args)
 }
 
-
+#' Get a Postgres Connection
+#' 
 #' @export
 get_postgres_conn <- function(database, ...){
   default_args = list(
