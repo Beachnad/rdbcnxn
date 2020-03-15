@@ -7,7 +7,16 @@ jobs:
       - checkout
       - run:
           name: Install system dependencies
-          command: apt-get update && apt-get install -y unixodbc unixodbc-dev libxml2-dev libgit2-dev libssl-dev
+          command: apt-get update && apt-get install -y \
+            libxml2-dev \
+            libgit2-dev \
+            libssl-dev \
+            # Database Clients
+            unixodbc \
+            unixodbc-dev \
+            libmariadbclient-dev \
+            libpq-dev
+            
       - run:
           name: Install devtools
           command: R -e "install.packages('devtools', repos='http://cran.us.r-project.org')"
