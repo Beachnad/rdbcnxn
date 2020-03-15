@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/main
     docker:
-      - image: appsilon/ci-base:2.0
+      - image: appsilon/ci-base:1.0
     steps:
       - checkout
       - restore_cache:
@@ -15,6 +15,9 @@ jobs:
           command: |
             R -e 'devtools::install_deps(dependencies = TRUE)'
       - save_cache:
+      
+      
+      
           key: deps1-{{ .Branch }}-{{ checksum "DESCRIPTION" }}
           paths:
             - "/usr/local/lib/R/site-library"
