@@ -1,6 +1,10 @@
-# R ProCare
+# RDBCNXN
 
-# Installation
+## Description
+
+Just a simple R package for generating database connections in a secure way.
+
+## Installation
 
 ```
 devtools::install_bitbucket(
@@ -10,6 +14,6 @@ devtools::install_bitbucket(
 )
 ```
 
-# What is this?
+# How to use
 
 Simply, a handful of functions which will do nothing more than return a connection object for various databases.

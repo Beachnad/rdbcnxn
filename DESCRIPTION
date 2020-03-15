@@ -1,8 +1,8 @@
-Package: rprocare
+Package: rdbcnxn
 Title: Functions for interacting with procare databases
 Version: 0.0.8
-Authors@R: person("Danny", "Beachnau", email = "dbeachnau@procare.com", role = c("aut", "cre"))
-Description: Functions which interact with procare's databases.
+Authors@R: person("Danny", "Beachnau", email = "DannyBeachnau@Gmail.com", role = c("aut", "cre"))
+Description: Faster safer datbase connections.
 Depends: R (>= 3.4.3)
 License: None
 Encoding: UTF-8
