@@ -17,6 +17,9 @@ jobs:
       - run:
           name: Check package
           command: R CMD check *tar.gz
+          
+      - store_artifacts:
+          path: /root/project/rdbcnxn.Rcheck/
   
 #     working_directory: ~/main
 #     docker:
