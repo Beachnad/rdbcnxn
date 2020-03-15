@@ -10,7 +10,7 @@ jobs:
           command: apt-get update && apt-get install -y unixodbc unixodbc-dev
       - run:
           name: Install devtools
-          command: R -e "install.packages('devtools')"
+          command: R -e "install.packages('Rcpp', dependencies = TRUE); install.packages('devtools')"
       - run:
           name: Install package dependencies
           command: R -e "devtools::install_deps(dep = TRUE)"
