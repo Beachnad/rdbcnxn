@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install system dependencies
-          command: apt-get update && cat packages.txt | xargs sudo apt-get install
+          command: apt-get update && apt-get install -y dos2unix && doc2unix packages.txt && cat packages.txt | xargs apt-get install
       - run:
           name: Install devtools
           command: R -e "install.packages('devtools', repos='http://cran.us.r-project.org')"
