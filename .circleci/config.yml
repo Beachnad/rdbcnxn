@@ -5,9 +5,15 @@ jobs:
       - image: rocker/r-ver:3.5.3
     steps:
       - checkout
+      
+      - restore_cache:
+         keys:
+           - sys-deps-{{ checksum "packages.txt" }}
+           - sys-deps- # used if checksum fails
+
       - run:
           name: Install system dependencies
-          command: apt-get update && apt-get install -y dos2unix && doc2unix packages.txt && cat packages.txt | xargs apt-get install
+          command: apt-get update && apt-get install -y dos2unix && dos2unix packages.txt && cat packages.txt | xargs apt-get install -y
       - run:
           name: Install devtools
           command: R -e "install.packages('devtools', repos='http://cran.us.r-project.org')"
