@@ -6,3 +6,4 @@ unixodbc-dev
 libmariadbclient-dev
 libpq-dev
 texlive-latex-base
+texlive-fonts-extra
