@@ -6,6 +6,11 @@
 \usage{
 get_postgres_conn(database, ...)
 }
+\arguments{
+\item{database}{Name of the database you are trying to connect to.}
+
+\item{...}{arguments to pass into \code{DBI::dbConnect} function.}
+}
 \description{
 Get a Postgres Connection
 }

@@ -28,6 +28,8 @@ conn_function <- function(driver){
 #' Get a SQL Server Connection
 #' 
 #' @export
+#' @param database Name of the database you are trying to connect to.
+#' @param ... arguments to pass into \code{DBI::dbConnect} function.
 get_sql_server_conn <- function(database, ...){
   default_args = list(
     driver = "ODBC Driver 17 for SQL Server",
@@ -57,6 +59,8 @@ get_sql_server_conn <- function(database, ...){
 #' Get a MYSQL Connection
 #' 
 #' @export
+#' @param database Name of the database you are trying to connect to.
+#' @param ... arguments to pass into \code{DBI::dbConnect} function.
 get_mysql_conn <- function(database, ...){
   default_args = list(
     user = get_user(database),
@@ -78,6 +82,8 @@ get_mysql_conn <- function(database, ...){
 #' Get a Postgres Connection
 #' 
 #' @export
+#' @param database Name of the database you are trying to connect to.
+#' @param ... arguments to pass into \code{DBI::dbConnect} function.
 get_postgres_conn <- function(database, ...){
   default_args = list(
     user = get_user(database),
