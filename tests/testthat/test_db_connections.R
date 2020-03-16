@@ -3,20 +3,20 @@ library(DBI)
 library(dplyr)
 
 testthat::setup({
-  PG_TEST_PASS='postgres'
-  PG_TEST_HOST='localhost'
-  PG_TEST_USER='postgres'
-  PG_TEST_PORT='5432'
+  PG_TEST_PASS <<- 'postgres'
+  PG_TEST_HOST <<- 'localhost'
+  PG_TEST_USER <<- 'postgres'
+  PG_TEST_PORT <<- '5432'
   
-  MSSQL_TEST_PASS='sql_server2018'
-  MSSQL_TEST_HOST='localhost'
-  MSSQL_TEST_USER='sa'
-  MSSQL_TEST_PORT='1433'
+  MSSQL_TEST_PASS <<- 'sql_server2018'
+  MSSQL_TEST_HOST <<- 'localhost'
+  MSSQL_TEST_USER <<- 'sa'
+  MSSQL_TEST_PORT <<- '1433'
   
-  MYSQL_TEST_PASS='mysql_2018'
-  MYSQL_TEST_HOST='localhost'
-  MYSQL_TEST_USER='root'
-  MYSQL_TEST_PORT='3306'
+  MYSQL_TEST_PASS <<- 'mysql_2018'
+  MYSQL_TEST_HOST <<- 'localhost'
+  MYSQL_TEST_USER <<- 'root'
+  MYSQL_TEST_PORT <<- '3306'
   
   Sys.setenv(
     PG_TEST_PASS=PG_TEST_PASS,

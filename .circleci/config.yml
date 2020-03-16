@@ -38,9 +38,15 @@ jobs:
       - run:
           name: Install package dependencies
           command: R -e "devtools::install_deps(dep = TRUE, repos='http://cran.us.r-project.org')"
+      
       - run:
           name: Build package
           command: R CMD build .
+      
+      - run:
+          name: Testing using testthat
+          command: R -e "testthat::test_package('rdbcnxn')"
+      
       - run:
           name: Check package
           command: R CMD check *tar.gz
