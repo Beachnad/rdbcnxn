@@ -44,12 +44,12 @@ jobs:
           command: R CMD build .
       
       - run:
-          name: Testing using testthat
-          command: R -e "testthat::test_package('rdbcnxn')"
-      
-      - run:
           name: Check package
           command: R CMD check *tar.gz
+          
+      - run:
+          name: Testing using testthat
+          command: R -e "devtools::test()"
           
       - store_artifacts:
           path: /root/project/rdbcnxn.Rcheck/
